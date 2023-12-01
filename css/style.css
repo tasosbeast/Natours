@@ -7,6 +7,21 @@ Dark green: #28b485
 
 */
 
+:root {
+  --color-primary: #55c57a;
+  --color-primary-light: #7ed56f;
+  --color-primary-light-alpha: rgba(126, 213, 111, 0.801);
+  --color-primary-dark: #28b485;
+  --color-primary-dark-alpha: rgba(40, 180, 133, 0.801);
+  --color-grey-light-1: #f7f7f7;
+  --color-grey-light-2: #eee;
+  --color-grey-dark: #777;
+  --color-white: #fff;
+  --color-black: #000;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -15,8 +30,22 @@ Dark green: #28b485
 
 body {
   font-family: "Lato", sans-serif;
-  font-weight: 400;
+  font-weight: var(--font-weight-normal);
   font-size: 16px;
   line-height: 1.7;
-  color: #777;
+  color: var(--color-grey-dark);
+  padding: 30px;
+}
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      var(--color-primary-light-alpha),
+      var(--color-primary-dark-alpha)
+    ),
+    url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
