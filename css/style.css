@@ -20,6 +20,7 @@ Dark green: #28b485
   --color-black: #000;
   --font-weight-light: 300;
   --font-weight-normal: 400;
+  --font-weight-bold: 700;
 }
 
 * {
@@ -59,4 +60,31 @@ body {
 
 .logo {
   height: 35px;
+}
+
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.heading-primary {
+  color: var(--color-white);
+  text-transform: uppercase;
+}
+
+.heading-primary-main {
+  display: block;
+  font-size: 60px;
+  font-weight: var(--font-weight-normal);
+  letter-spacing: 35px;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 20px;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 17.4px;
 }
