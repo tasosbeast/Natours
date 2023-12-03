@@ -33,10 +33,12 @@ Dark green: #28b485
   /* font sizes */
 }
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 html {
@@ -49,6 +51,7 @@ body {
   line-height: 1.7;
   color: var(--color-grey-dark);
   padding: 3rem;
+  box-sizing: border-box;
 }
 
 .header {
@@ -165,6 +168,7 @@ body {
     border-radius: 10rem;
     transition: all 0.2s;
     position: relative;
+    font-size: 1.6rem;
   }
 
   &:hover {
