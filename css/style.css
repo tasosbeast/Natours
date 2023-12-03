@@ -135,6 +135,18 @@ body {
   }
 }
 
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    filter: blur(50px);
+    transform: translateY(30px);
+  }
+
+  100% {
+    filter: blur(0);
+    transform: translate(0);
+  }
+}
 .btn {
   &:link,
   &:visited {
@@ -144,16 +156,35 @@ body {
     display: inline-block;
     border-radius: 100px;
     transition: all 0.2s;
+    position: relative;
   }
 
   &:hover {
     transform: translateY(-3px);
     box-shadow: var(--shadow-dark);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
   }
 
   &:active {
     transform: translateY(-1px);
     box-shadow: var(--shadow-light);
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
   }
 }
 
@@ -162,6 +193,10 @@ body {
   &:visited {
     background-color: var(--color-white);
     color: var(--color-grey-dark);
+  }
+
+  &::after {
+    background-color: var(--color-white);
   }
 }
 
@@ -179,4 +214,9 @@ body {
   &:active {
     background-color: var(--color-primary-dark);
   }
+}
+
+.btn-animated {
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
 }
