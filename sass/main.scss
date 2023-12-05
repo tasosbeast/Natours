@@ -54,24 +54,24 @@ body {
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
-}
 
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
-}
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
 
-.header__logo {
-  height: 3.5rem;
-}
+  &__logo {
+    height: 3.5rem;
+  }
 
-.header__text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  &__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
 }
 
 .heading-primary {
@@ -79,27 +79,27 @@ body {
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 6rem;
-}
 
-.heading-primary--main {
-  display: block;
-  font-size: 6rem;
-  font-weight: $font-weight-normal;
-  letter-spacing: 3.5rem;
-  animation: $animation-moveInLeft;
+  &--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: $font-weight-normal;
+    letter-spacing: 3.5rem;
+    animation: $animation-moveInLeft;
 
-  /* 
+    /* 
     animation-delay: 3s;
     animation-iteration-count: 3;
     */
-}
+  }
 
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: $font-weight-bold;
-  letter-spacing: 1.75rem;
-  animation: $animation-moveInRight;
+  &--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: $font-weight-light;
+    letter-spacing: 1.75rem;
+    animation: $animation-moveInRight;
+  }
 }
 
 @keyframes moveInLeft {
@@ -186,36 +186,30 @@ body {
     z-index: -1;
     transition: all 0.4s;
   }
-}
 
-.btn--white {
-  &:link,
-  &:visited {
+  &--white {
     background-color: $color-white;
     color: $color-grey-dark;
+
+    &::after {
+      background-color: $color-white;
+    }
   }
 
-  &::after {
-    background-color: $color-white;
-  }
-}
-
-.btn--green {
-  &:link,
-  &:visited {
+  &--green {
     background-color: $color-primary;
     color: $color-white;
+
+    &:hover {
+      background-color: $color-primary-dark;
+    }
+
+    &:active {
+      background-color: $color-primary-dark;
+    }
   }
 
-  &:hover {
-    background-color: $color-primary-dark;
+  &--animated {
+    animation: $animation-moveInBottom;
   }
-
-  &:active {
-    background-color: $color-primary-dark;
-  }
-}
-
-.btn--animated {
-  animation: $animation-moveInBottom;
 }
