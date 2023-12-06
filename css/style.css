@@ -46,19 +46,19 @@ body {
     filter: blur(0);
     transform: translate(0); } }
 
-.body {
+body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
   color: #777;
   padding: 3rem; }
 
-heading-primary {
+.heading-primary {
   color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 6rem; }
-  heading-primary--main {
+  .heading-primary--main {
     display: block;
     font-size: 6rem;
     font-weight: 400;
@@ -68,7 +68,7 @@ heading-primary {
       animation-delay: 3s;
       animation-iteration-count: 3;
       */ }
-  heading-primary--sub {
+  .heading-primary--sub {
     display: block;
     font-size: 2rem;
     font-weight: 300;

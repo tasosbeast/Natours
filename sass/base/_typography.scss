@@ -1,4 +1,4 @@
-.body {
+body {
   font-family: "Lato", sans-serif;
   font-weight: $font-weight-normal;
   line-height: 1.7;
@@ -6,7 +6,7 @@
   padding: 3rem;
 }
 
-heading-primary {
+.heading-primary {
   color: $color-white;
   text-transform: uppercase;
   backface-visibility: hidden;
