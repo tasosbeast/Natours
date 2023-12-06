@@ -1,0 +1,22 @@
+/* colors */
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+$color-grey-dark: #777;
+$color-white: #fff;
+$color-black: #000;
+/* font weights */
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+/* box shadows */
+$shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+$shadow-dark: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+/* animations */
+$animation-moveInLeft: moveInLeft 1s ease-out;
+$animation-moveInRight: moveInRight 1s ease-out;
+$animation-moveInBottom: moveInBottom 0.5s ease-out 0.75s backwards;
+
+/* font sizes */
