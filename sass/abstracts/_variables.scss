@@ -19,4 +19,7 @@ $animation-moveInLeft: moveInLeft 1s ease-out;
 $animation-moveInRight: moveInRight 1s ease-out;
 $animation-moveInBottom: moveInBottom 0.5s ease-out 0.75s backwards;
 
-/* font sizes */
+/* grid */
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-horizontal: 6rem;
