@@ -40,15 +40,16 @@ body {
   font-weight: $font-weight-bold;
   display: inline-block;
   background-image: linear-gradient(
-    to right,
+    270deg,
     $color-primary-light,
     $color-primary-dark
   );
+  background-size: 200% 200%;
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: 0.2rem;
   transition: all 0.2s;
-
+  animation: Gradient 3s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
   &:hover {
     transform: skewY(-4deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
