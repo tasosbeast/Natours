@@ -1,0 +1,10 @@
+// Dependencies:
+@use "../abstracts/variables";
+
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(variables.$color-black, 0.1);
+  background-color: variables.$color-white;
+  border-radius: variables.$border-radius;
+}
