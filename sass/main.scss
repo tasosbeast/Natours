@@ -1,18 +1,18 @@
-@import "abstracts/functions";
-@import "abstracts/mixins";
-@import "abstracts/variables";
+@use "abstracts/functions";
+@use "abstracts/mixins";
+@use "abstracts/variables";
 
-@import "base/base";
-@import "base/animation";
-@import "base/typography";
-@import "base/utilities";
+@use "base/base";
+@use "base/animation";
+@use "base/typography";
+@use "base/utilities";
 
-@import "components/button";
-@import "components/card";
-@import "components/composition";
-@import "components/feature-box";
+@use "components/button";
+@use "components/card";
+@use "components/composition";
+@use "components/feature-box";
 
-@import "layout/header";
-@import "layout/grid";
+@use "layout/header";
+@use "layout/grid";
 
-@import "pages/home";
+@use "pages/home";
