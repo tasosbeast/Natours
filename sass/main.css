@@ -198,7 +198,8 @@ body {
 .bg-video__content {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .btn:link, .btn:visited {
@@ -479,7 +480,8 @@ body {
   height: 16rem;
   float: left;
   shape-outside: circle(50% at 50% 50%);
-  clip-path: circle(50% at 50% 50%);
+  -webkit-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
   transform: translateX(-3rem) skewX(12deg);
   position: relative;
 }
@@ -612,6 +614,4 @@ body {
   background-size: cover;
   border-radius: 3px;
   height: 50rem;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=main.css.map */
