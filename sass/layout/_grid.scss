@@ -1,43 +1,13 @@
 @use "../abstracts/variables";
 
-.row {
-  max-width: variables.$grid-width;
+.grid {
   margin: 0 auto;
 
-  &:not(:last-child) {
-    margin-bottom: variables.$gutter-vertical;
-  }
-
   display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-columns:
+    [center-start]
+    repeat(12, [col-start] minmax(min-content, 9.5rem) [col-end])
+    [center-end];
   column-gap: variables.$gutter-horizontal;
   row-gap: variables.$gutter-vertical;
-}
-
-.row > * {
-  grid-column: span 12;
-}
-
-.row .col-1-of-2 {
-  grid-column: span 6;
-}
-
-.row .col-1-of-3 {
-  grid-column: span 4;
-}
-
-.row .col-2-of-3 {
-  grid-column: span 8;
-}
-
-.row .col-1-of-4 {
-  grid-column: span 3;
-}
-
-.row .col-2-of-4 {
-  grid-column: span 6;
-}
-
-.row .col-3-of-4 {
-  grid-column: span 9;
 }

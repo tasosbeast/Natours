@@ -4,6 +4,15 @@
   background-color: variables.$color-grey-light-1;
   padding: 25rem 0;
   margin-top: -20vh;
+
+  &__content {
+    align-items: center;
+  }
+
+  &__copy,
+  &__media {
+    grid-column: span 6;
+  }
 }
 
 .section-features {
@@ -22,12 +31,24 @@
   & > * {
     transform: skewY(7deg);
   }
+
+  &__grid {
+    > .section-features__item {
+      grid-column: span 3;
+    }
+  }
 }
 
 .section-tours {
   background-color: variables.$color-grey-light-1;
   padding: 25rem 0 15rem 0;
   margin-top: -10rem;
+
+  &__grid {
+    > .section-tours__item {
+      grid-column: span 4;
+    }
+  }
 }
 
 .section-stories {
@@ -48,6 +69,13 @@
   background-image: url(../img/nat-10.jpg);
   background-size: cover;
   border-radius: variables.$border-radius;
-
   height: 50rem;
+}
+
+@media (max-width: 56.25em) {
+  .section-about__content > *,
+  .section-features__grid > .section-features__item,
+  .section-tours__grid > .section-tours__item {
+    grid-column: span 12;
+  }
 }
