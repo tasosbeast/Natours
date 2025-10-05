@@ -1,49 +1,43 @@
-@use "../abstracts/mixins";
 @use "../abstracts/variables";
 
 .row {
   max-width: variables.$grid-width;
   margin: 0 auto;
+
   &:not(:last-child) {
     margin-bottom: variables.$gutter-vertical;
   }
 
-  @include mixins.clearfix;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: variables.$gutter-horizontal;
+  row-gap: variables.$gutter-vertical;
+}
 
-  [class^="col-"] {
-    float: left;
-    &:not(:last-child) {
-      margin-right: variables.$gutter-horizontal;
-    }
-  }
+.row > * {
+  grid-column: span 12;
+}
 
-  .col-1-of-2 {
-    width: calc((100% - #{variables.$gutter-horizontal}) / 2);
-  }
+.row .col-1-of-2 {
+  grid-column: span 6;
+}
 
-  .col-1-of-3 {
-    width: calc((100% - 2 * #{variables.$gutter-horizontal}) / 3);
-  }
+.row .col-1-of-3 {
+  grid-column: span 4;
+}
 
-  .col-2-of-3 {
-    width: calc(
-      2 * ((100% - 2 * #{variables.$gutter-horizontal}) / 3) + #{variables.$gutter-horizontal}
-    );
-  }
+.row .col-2-of-3 {
+  grid-column: span 8;
+}
 
-  .col-1-of-4 {
-    width: calc((100% - 3 * #{variables.$gutter-horizontal}) / 4);
-  }
+.row .col-1-of-4 {
+  grid-column: span 3;
+}
 
-  .col-2-of-4 {
-    width: calc(
-      2 * ((100% - 3 * #{variables.$gutter-horizontal}) / 4) + #{variables.$gutter-horizontal}
-    );
-  }
+.row .col-2-of-4 {
+  grid-column: span 6;
+}
 
-  .col-3-of-4 {
-    width: calc(
-      3 * ((100% - 3 * #{variables.$gutter-horizontal}) / 4) + 2 * #{variables.$gutter-horizontal}
-    );
-  }
+.row .col-3-of-4 {
+  grid-column: span 9;
 }
